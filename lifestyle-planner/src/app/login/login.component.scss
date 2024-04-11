@@ -1,5 +1,81 @@
-.content {
-    text-align: center;
-    padding: 2em;
-    /* Add more styling as needed */
+// General Style Variables
+$font-stack: Arial, sans-serif;
+$base-color: #333;
+$accent-color: #0056b3;
+$light-gray: #f4f4f9;
+$dark-gray: #666;
+$border-color: #ccc;
+$button-bg: #007bff;
+$button-hover-bg: #0056b3;
+
+// Basic reset and container styling
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: $light-gray;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: $base-color;
+}
+
+p {
+  text-align: center;
+  color: $dark-gray;
+  margin-bottom: 20px;
+}
+
+// Style for form groups and elements
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: $base-color;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  display: block;
+
+  &:focus {
+    border-color: $accent-color;
+    outline: none;
   }
+}
+
+// Button styling
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: $button-bg;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $button-hover-bg;
+  }
+}
