@@ -2,5 +2,15 @@
     <h1>Calendar</h1>
     <p>Plan and view your activities, events, and reminders.</p>
     <!-- Add your calendar features here -->
+</div>
+
+<div class="calendar">
+  <div *ngFor="let day of daysInMonth" class="day">
+    <div (click)="showEvents(day)">
+      {{ day.date.getDate() }}
+    </div>
+    <ul>
+      <li *ngFor="let event of day.events">{{ event.title }} at {{ event.time }}</li>
+    </ul>
   </div>
-  
+</div>
