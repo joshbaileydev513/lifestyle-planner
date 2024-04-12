@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { HttpClientModule } from '@angular/common/http';
 // Other imports...
 
 @NgModule({
@@ -19,6 +20,7 @@ import { CalendarComponent } from './calendar/calendar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     // Other modules...
   ],
   providers: [],
