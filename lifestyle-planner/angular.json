@@ -77,7 +77,6 @@
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "lifestyle-planner:build"
-            "proxyConfig": "proxy.conf.json"
           }
         },
         "test": {

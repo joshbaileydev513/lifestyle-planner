@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class QuotesService {
-  private apiUrl = '/api/quotes/'; // Use the local path that gets proxied
+  private apiUrl = 'https://zenquotes.io/api/quotes/'; // Your API URL here
   private apiKey = ''; // Replace with your actual API key
 
   constructor(private http: HttpClient) { }
