@@ -1,18 +1,64 @@
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr); // 7 days a week
-  .day {
-    border: 1px solid #ccc;
-    padding: 10px;
-    cursor: pointer;
-    &:hover {
-      background-color: #f0f0f0;
+.calendar-wrapper {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 1rem;
+  }
+
+  // FullCalendar overrides
+  .fc {
+    // Example: override font
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+
+    // Example: general color adjustments
+    --fc-border-color: #e0e0e0; 
+    --fc-daygrid-event-dot-width: 10px; // adjust size of event dots (month view)
+
+    // Example: change highlight color
+    --fc-today-bg-color: rgba(0, 123, 255, 0.1);
+    
+    // If you want to override heading colors or sizes:
+    .fc-toolbar-title {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    // Example: style buttons
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      border-radius: 4px;
+      cursor: pointer;
+      
+      &:hover {
+        background: #0056b3;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0,123,255,0.2);
+      }
+    }
+
+    // Example: style day cells
+    .fc-daygrid-day-frame {
+      transition: background-color 0.3s ease;
+      &:hover {
+        background-color: #f0f0f0;
+      }
     }
   }
 }
-
-// .content {
-//     text-align: center;
-//     padding: 2em;
-//     /* Add more styling as needed */
-//   }
