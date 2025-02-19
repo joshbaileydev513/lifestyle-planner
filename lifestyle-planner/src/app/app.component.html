@@ -1,52 +1,51 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<!-- app.component.html -->
-<div class="wrapper">
-  <nav class="navbar">
-    <div class="logo">
-      <a routerLink="/">Lifestyle Planner</a>
+<header class="main-header">
+  <div class="container">
+    <div class="brand">
+      <a routerLink="/" class="brand-logo">Lifestyle Planner</a>
     </div>
-    <div class="navbar-toggle" id="mobile-menu" (click)="toggleMenu()">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </div>
-    <ul class="nav-list" id="nav-list" [class.active]="menuActive">
-      <li class="nav-item">
-        <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/motivation" routerLinkActive="active" class="nav-link">Motivation</a>
-      </li>
-      <li class="nav-item">
-        <a routerLink="/calendar" routerLinkActive="active" class="nav-link">Calendar</a>
-      </li>
-    </ul>
-  </nav>
 
-  <!-- Add your homepage content here -->
-  <div class="content">
-    <h1>Welcome to your Lifestyle Planner</h1>
-    <p>Organize your life, stay motivated, and track your progress!</p>
-    <!-- Add more content as needed -->
+    <nav class="main-nav" [class.open]="menuActive">
+      <a routerLink="/login" routerLinkActive="active" (click)="closeMenu()">
+        Login
+      </a>
+      <a routerLink="/motivation" routerLinkActive="active" (click)="closeMenu()">
+        Motivation
+      </a>
+      <a routerLink="/calendar" routerLinkActive="active" (click)="closeMenu()">
+        Calendar
+      </a>
+    </nav>
+
+    <div class="mobile-menu-toggle" (click)="toggleMenu()">
+      <!-- Hamburger icon -->
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
-</div>
+</header>
 
+<main>
+  <!-- Hero / Intro Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to your Lifestyle Planner</h1>
+      <p>Organize your life, stay motivated, and track your progress!</p>
+      <button class="cta-button" routerLink="/calendar">
+        Get Started
+      </button>
+    </div>
+  </section>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+  <!-- You can add more content sections here if needed -->
+  
+  <!-- Router content renders here -->
+  <router-outlet></router-outlet>
+</main>
 
-<router-outlet></router-outlet>
+<footer class="main-footer">
+  <div class="container">
+    <p>&copy; {{ currentYear }} Lifestyle Planner. All rights reserved.</p>
+  </div>
+</footer>
+
