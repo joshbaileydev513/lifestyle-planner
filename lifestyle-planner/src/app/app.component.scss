@@ -96,7 +96,7 @@
   background: url('https://via.placeholder.com/1920x1080') center/cover no-repeat;
   color: #fff;
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 8rem 3rem;
 }
 .hero-content {
   background: rgba(0,0,0,0.5);
@@ -131,6 +131,10 @@
   padding: 1rem 0;
   text-align: center;
   margin-top: 2rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 .main-footer p {
   color: #666;
