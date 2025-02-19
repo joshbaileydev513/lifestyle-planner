@@ -1,4 +1,3 @@
-// app.module.ts
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
-// Other imports...
+import { FullCalendarModule } from '@fullcalendar/angular'; 
 
 @NgModule({
   declarations: [
@@ -15,13 +14,12 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     MotivationComponent,
     CalendarComponent,
-    // Other components...
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // Other modules...
+    FullCalendarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
