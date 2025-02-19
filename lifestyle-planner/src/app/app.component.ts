@@ -1,4 +1,3 @@
-// app.component.ts
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,7 +8,15 @@ import { Component } from '@angular/core';
 export class AppComponent {
   menuActive: boolean = false;
 
-  toggleMenu() {
+  get currentYear(): number {
+    return new Date().getFullYear();
+  }
+
+  toggleMenu(): void {
     this.menuActive = !this.menuActive;
+  }
+
+  closeMenu(): void {
+    this.menuActive = false;
   }
 }
