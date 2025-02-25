@@ -6,6 +6,7 @@ import { MotivationComponent } from './motivation/motivation.component';
 import { CalendarComponent } from './calendar/calendar.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'motivation', component: MotivationComponent },
   { path: 'calendar', component: CalendarComponent },

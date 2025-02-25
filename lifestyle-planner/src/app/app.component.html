@@ -5,13 +5,13 @@
     </div>
 
     <nav class="main-nav" [class.open]="menuActive">
-      <a routerLink="/login" routerLinkActive="active" (click)="closeMenu()">
+      <a routerLink="/login" routerLinkActive="active" (click)="closeMenu()" *ngIf="!isLoggedIn">
         Login
       </a>
-      <a routerLink="/motivation" routerLinkActive="active" (click)="closeMenu()">
+      <a routerLink="/motivation" routerLinkActive="active" (click)="closeMenu()" *ngIf="isLoggedIn">
         Motivation
       </a>
-      <a routerLink="/calendar" routerLinkActive="active" (click)="closeMenu()">
+      <a routerLink="/calendar" routerLinkActive="active" (click)="closeMenu()" *ngIf="isLoggedIn">
         Calendar
       </a>
     </nav>

@@ -10,6 +10,10 @@ export class AppComponent {
   menuActive: boolean = false;
   showHero: boolean = true;
 
+  get isLoggedIn(): boolean {
+    return localStorage.getItem('loggedIn') === 'true';
+  }
+
   get currentYear(): number {
     return new Date().getFullYear();
   }
