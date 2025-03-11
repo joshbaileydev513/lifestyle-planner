@@ -1,5 +1,33 @@
 .content {
-    text-align: center;
-    padding: 2em;
-    /* Add more styling as needed */
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75vh;
+  padding: 2em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quote-container {
+  max-width: 600px;
+  text-align: center;
+  padding: 1.5em;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 1em 0;
+}
+
+.quote-text {
+  font-size: 1.5em;
+  font-style: italic; 
+  color: #333;
+}
+
+.quote-author {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 0.5em;
+}

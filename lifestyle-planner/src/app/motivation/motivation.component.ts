@@ -6,24 +6,22 @@ import { QuotesService } from '../services/quotes.service';
   templateUrl: './motivation.component.html',
   styleUrls: ['./motivation.component.scss']
 })
-
 export class MotivationComponent implements OnInit {
-  quotes: any[] = [];
+  quotes: any[] = []; // Define the quotes property as an array
+  quoteText: string | undefined;
+  quoteAuthor: string | undefined;
 
-  constructor(private quotesService: QuotesService) { }
+  constructor(private quotesService: QuotesService) {}
 
   ngOnInit(): void {
-    this.loadQuotes();
+    this.fetchQuote();
   }
 
-  loadQuotes(): void {
-    this.quotesService.getQuotes().subscribe({
-      next: (data) => {
-        this.quotes = data;
-        console.log(data); // Optional: to see data in the console
-      },
-      error: (err) => console.error('Error fetching quotes:', err),
-      complete: () => console.log('Quotes fetch completed') // Optional
+  fetchQuote(): void {
+    this.quotesService.getQuote().subscribe((quote: any) => {
+      this.quotes.push({ content: quote.content, author: quote.author }); // Push the fetched quote into the quotes array
+      this.quoteText = quote.content; // Set the quoteText for display
+      this.quoteAuthor = quote.author; // Set the quoteAuthor for display
     });
   }
 }

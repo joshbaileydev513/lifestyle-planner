@@ -6,7 +6,10 @@ import { LoginComponent } from './login/login.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular'; 
+import { QuotesService } from './services/quotes.service';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +23,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     AppRoutingModule,
     HttpClientModule,
     FullCalendarModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [QuotesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

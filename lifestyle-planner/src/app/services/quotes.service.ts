@@ -3,16 +3,15 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class QuotesService {
-  private apiUrl = 'https://zenquotes.io/api/quotes/'; // Your API URL here
-  private apiKey = ''; // Replace with your actual API key
+  private apiUrl = 'http://api.quotable.io/random';  // Quotable API endpoint
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getQuotes(): Observable<any> {
-    return this.http.get(`${this.apiUrl}${this.apiKey}`);
+  getQuote(): Observable<any> {
+    return this.http.get<any>(this.apiUrl);  // Make the GET request to the Quotable API
   }
 }
 
