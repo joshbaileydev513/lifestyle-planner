@@ -8,7 +8,6 @@ $border-color: #ccc;
 $button-bg: #007bff;
 $button-hover-bg: #0056b3;
 
-// Basic reset and container styling
 * {
   box-sizing: border-box;
   margin: 0;
@@ -37,7 +36,6 @@ p {
   margin-bottom: 20px;
 }
 
-// Style for form groups and elements
 .form-group {
   margin-bottom: 20px;
 }
@@ -64,7 +62,6 @@ input[type="password"] {
   }
 }
 
-// Button styling
 button[type="submit"] {
   width: 100%;
   padding: 10px;

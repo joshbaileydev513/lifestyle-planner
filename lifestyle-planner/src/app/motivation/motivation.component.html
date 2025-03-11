@@ -2,14 +2,11 @@
   <h1>Motivation</h1>
   <p>Get your daily dose of motivation to keep you going!</p>
   <div *ngIf="quotes.length">
-    <h2>Motivational Quotes</h2>
-    <ul>
-      <li *ngFor="let quote of quotes">
-        <blockquote>
-          {{quote.q}}
-          <footer>- {{quote.a}}</footer>
-        </blockquote>
-      </li>
-    </ul>
+    <div class="quote-container" *ngIf="quoteText">
+      <blockquote class="quote-text">{{ quoteText }}</blockquote>
+      <div>
+        <footer *ngIf="quoteAuthor" class="quote-author">— {{ quoteAuthor }}</footer>
+      </div>
+    </div>
   </div>
 </div>
