@@ -62,3 +62,29 @@
     }
   }
 }
+
+/* Style for the previous and next buttons */
+.fc-prev-button,
+.fc-next-button {
+  background-color: black; // Change to black
+  color: white; // Change text color to white
+}
+
+/* Style for the today button */
+.fc-today-button {
+  background-color: black; // Change to black
+  color: white; // Change text color to white
+}
+
+/* Style for the month/week/day buttons */
+.fc-dayGridMonth-button,
+.fc-timeGridWeek-button,
+.fc-timeGridDay-button {
+  background-color: lightgrey !important; // Default color for inactive buttons
+  color: black !important; // Text color for inactive buttons
+
+  &.fc-button-active {
+    background-color: black !important; // Color for the active button
+    color: white !important; // Text color for the active button
+  }
+}
