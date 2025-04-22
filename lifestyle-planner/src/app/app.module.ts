@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FullCalendarModule } from '@fullcalendar/angular'; 
 import { QuotesService } from './services/quotes.service';
+import { StickyNoteComponent } from './sticky-note/sticky-note.component';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { QuotesService } from './services/quotes.service';
     LoginComponent,
     MotivationComponent,
     CalendarComponent,
+    StickyNoteComponent,
   ],
   imports: [
     BrowserModule,

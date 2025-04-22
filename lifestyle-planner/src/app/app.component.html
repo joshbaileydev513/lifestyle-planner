@@ -14,6 +14,9 @@
       <a routerLink="/calendar" routerLinkActive="active" (click)="closeMenu()" *ngIf="isLoggedIn">
         Calendar
       </a>
+      <a routerLink="/sticky-note" routerLinkActive="active" (click)="closeMenu()" *ngIf="isLoggedIn">
+        Sticky Notes
+      </a>
     </nav>
 
     <div class="mobile-menu-toggle" (click)="toggleMenu()">
